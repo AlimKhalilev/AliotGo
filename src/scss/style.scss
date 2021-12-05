@@ -172,3 +172,76 @@
     }
 
 }
+
+.banners {
+
+    // .banners__inner
+
+    &__inner {
+    }
+
+    .cardSection {
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+.services {
+
+    // .services__body
+
+    &__body {
+    }
+
+    // .services__cards
+
+    &__cards {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    // .services__card
+
+    &__card {
+        border-radius: 1.5rem;
+        background-color: $color_black_main;
+        flex-basis: 16rem;
+        padding: 2rem 2.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        picture {
+            //display: flex;
+        }
+    }
+
+    // .services__cardTitle
+
+    &__cardTitle {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        color: $color_milk;
+        margin-top: 1.5rem;
+    }
+
+    // .services__header
+
+    &__header {
+        text-align: center;
+        margin-top: 4.5rem;
+    }
+
+    // .services__title
+
+    &__title {
+        font-size: 4rem;
+        line-height: 1.2;
+        color: $color_black_main;
+        font-weight: 800;
+    }
+}

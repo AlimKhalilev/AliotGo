@@ -22,6 +22,7 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     background-image: url(../img/body_bg.png);
+    background-size: cover;
     font-size: 16px;
 
     @media ($media_xl) {

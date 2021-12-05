@@ -1,7 +1,7 @@
 // === header === [ Стили для навбара, используемые на всех страницах ] ===
 
 .header {
-    margin-top: 3.5rem;
+    margin-top: 3rem;
 
     // .header__inner
 
@@ -76,9 +76,24 @@
     &__download {
         display: flex;
         align-items: center;
+        text-decoration: none;
+
+        padding: 0.625rem 1.25rem;
+        background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 94px;
 
         svg {
             fill: $color_black_main;
+        }
+
+        span {
+            font-weight: 600;
+            font-size: 1.375rem;
+            color: $color_black_main;
+
+            display: inline-block;
+            margin-left: 1rem;
         }
     }
 }
@@ -141,7 +156,7 @@
         color: $color_black_main;
         text-decoration: none;
 
-        font-weight: 500;
+        font-weight: 600;
         font-size: 1.25rem;
 
         &::after {

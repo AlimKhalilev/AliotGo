@@ -433,6 +433,14 @@ ul {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
   src: url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -4110,6 +4118,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   background-image: url(../img/body_bg.png);
+  background-size: cover;
   font-size: 16px;
   min-height: 100vh;
   display: -webkit-box;
@@ -4426,6 +4435,13 @@ body.hideScroll {
   font-weight: 700;
   font-size: 1.5rem;
   color: #FFFFFF;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border-radius: 3rem;
+  background: -o-linear-gradient(358.09deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.15) 100.82%);
+  background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.15) 100.82%);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .baseCardLink__icon {
@@ -4441,10 +4457,12 @@ body.hideScroll {
   background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.15) 100.82%);
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
 }
 
 .baseCardLink__arrow {
   width: 1rem;
+  height: 1.5rem;
   fill: #FFFFFF;
   position: absolute;
   top: 50%;
@@ -4482,10 +4500,28 @@ body.hideScroll {
   margin: 2.125rem 0;
 }
 
+.baseCard__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .cardSection {
   position: relative;
   width: 100%;
   padding: calc(33.3% / 2) 0;
+}
+
+.cardSection--main {
+  padding: calc(42% / 2) 0;
+}
+
+.cardSection--main .baseCardLink__text {
+  background: -o-linear-gradient(358.09deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.15) 100.82%);
+  background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.15) 100.82%);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  padding: 1.25rem 2rem;
 }
 
 .cardSection__banner img {
@@ -4506,11 +4542,29 @@ body.hideScroll {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
+  overflow: hidden;
+  border-radius: 1.5rem;
 }
 
 .cardSection__baseCard--right {
   right: 2.5rem;
   left: unset;
+}
+
+.cardSection__moveBlock {
+  position: absolute;
+  background: -o-linear-gradient(2.14deg, rgba(0, 102, 255, 0.7) -62.31%, rgba(255, 43, 247, 0.7) 85.25%);
+  background: linear-gradient(87.86deg, rgba(0, 102, 255, 0.7) -62.31%, rgba(255, 43, 247, 0.7) 85.25%);
+  -webkit-filter: blur(45px);
+          filter: blur(45px);
+  border-radius: 130px;
+  width: 21rem;
+  height: 17.625rem;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /* СТИЛИ КОМПОНЕНТОВ (первая буква c- означает custom) */
@@ -5269,7 +5323,7 @@ body.hideScroll {
 }
 
 .header {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
 }
 
 .header__inner {
@@ -5309,10 +5363,25 @@ body.hideScroll {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+  background: -o-linear-gradient(358.09deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);
+  background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 94px;
 }
 
 .header__download svg {
   fill: #2A454E;
+}
+
+.header__download span {
+  font-weight: 600;
+  font-size: 1.375rem;
+  color: #2A454E;
+  display: inline-block;
+  margin-left: 1rem;
 }
 
 .logo {
@@ -5352,7 +5421,7 @@ body.hideScroll {
   padding: 0.4rem 0;
   color: #2A454E;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.25rem;
 }
 
@@ -5497,6 +5566,59 @@ body.hideScroll {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.banners .cardSection:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.services__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.services__card {
+  border-radius: 1.5rem;
+  background-color: #2A454E;
+  -ms-flex-preferred-size: 16rem;
+      flex-basis: 16rem;
+  padding: 2rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services__cardTitle {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #F7F2FD;
+  margin-top: 1.5rem;
+}
+
+.services__header {
+  text-align: center;
+  margin-top: 4.5rem;
+}
+
+.services__title {
+  font-size: 4rem;
+  line-height: 1.2;
+  color: #2A454E;
+  font-weight: 800;
 }
 
 @media (min-width: 769px) {
