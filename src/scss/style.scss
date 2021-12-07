@@ -198,7 +198,7 @@
 
     &__cards {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     // .services__card
@@ -206,13 +206,17 @@
     &__card {
         border-radius: 1.5rem;
         background-color: $color_black_main;
-        flex-basis: 16rem;
-        padding: 2rem 2.5rem;
+        flex-basis: 13rem;
+        padding: 2rem 1.5rem;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
+        
+        &:not(:last-child) {
+            margin-right: 4.375rem;
+        }
 
         picture {
             //display: flex;
@@ -222,7 +226,7 @@
     // .services__cardTitle
 
     &__cardTitle {
-        font-weight: 700;
+        font-weight: 500;
         font-size: 1.5rem;
         line-height: 1.2;
         color: $color_milk;
@@ -233,14 +237,14 @@
 
     &__header {
         text-align: center;
-        margin-top: 4.5rem;
+        margin-top: 3.375rem;
     }
 
     // .services__title
 
     &__title {
-        font-size: 4rem;
-        line-height: 1.2;
+        font-size: 3rem;
+        line-height: 1.25;
         color: $color_black_main;
         font-weight: 800;
     }
