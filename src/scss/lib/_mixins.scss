@@ -3,11 +3,11 @@
 // используется для одинаковых отступов внутри секций
 
 :root {
-    --section_indent: 3rem;
+    --section_indent: 7rem;
     --header-min-height: 5rem;
 
     @media ($media_sm) {
-        --section_indent: 2rem;
+        --section_indent: 3rem;
     }
 }
 

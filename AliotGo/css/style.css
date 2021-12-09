@@ -4109,7 +4109,7 @@ button.swiper-pagination-bullet {
 /* Sliding exits */
 
 :root {
-  --section_indent: 3rem;
+  --section_indent: 7rem;
   --header-min-height: 5rem;
 }
 
@@ -4561,6 +4561,104 @@ body.hideScroll {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.appCardButton {
+  background: -o-linear-gradient(358.09deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);
+  background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 4.375rem;
+  padding: 0.75rem 1.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.appCardButton__img picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.appCardButton__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1.25rem;
+  color: #000;
+}
+
+.appCardButton__download {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.appCardButton__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.appCard {
+  background: -o-linear-gradient(323.4deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  border-radius: 1.5rem;
+  padding: 3.125rem 2.5rem 3.125rem 3.75rem;
+}
+
+.appCard__title {
+  font-weight: 600;
+  font-size: 2.25rem;
+  color: #2A454E;
+}
+
+.appCard__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.5rem;
+}
+
+.appCard__buttons .appCardButton:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.footerMenu__title {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.footerMenu__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1.25rem;
+}
+
+.footerMenu__link {
+  text-decoration: none;
+  line-height: 1.9;
+  color: #FFFFFF;
 }
 
 /* СТИЛИ КОМПОНЕНТОВ (первая буква c- означает custom) */
@@ -5426,21 +5524,69 @@ body.hideScroll {
 }
 
 .footer {
-  background-color: tomato;
-  padding: 1.5rem 0;
+  position: relative;
+  background-color: #2A454E;
+  padding: 7.5rem 0 8.75rem 0;
+  margin-top: 10rem;
 }
 
 .footer__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.footer__inner p {
-  color: #FFFFFF;
+.footer__banner {
+  background-color: #FFFFFF;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3.125rem 2rem 3.125rem 11.25rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-55%);
+      -ms-transform: translateY(-55%);
+          transform: translateY(-55%);
+}
+
+.footer__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.footer__navigation .footerMenu {
+  margin-right: 5rem;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__socialLink picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__socialLink:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .main__header {
@@ -5592,19 +5738,33 @@ body.hideScroll {
   margin-top: 1.5rem;
 }
 
-.services__header {
+.app__header {
   text-align: center;
-  margin-top: 3.375rem;
 }
 
-.services__title {
+.app__title {
   font-size: 3rem;
   line-height: 1.25;
   color: #2A454E;
-  font-weight: 800;
+  font-weight: 700;
 }
 
-@media (min-width: 769px) {
+.app__body {
+  margin-top: 5.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app__card {
+  margin-top: 3.125rem;
+  margin-left: 0.75rem;
+}
+
+@media (min-width: 779px) {
   .btn {
     cursor: pointer;
   }
@@ -5665,13 +5825,13 @@ body.hideScroll {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 778px) {
   .section__inner {
     width: 90%;
   }
 
   :root {
-    --section_indent: 2rem;
+    --section_indent: 3rem;
   }
 
   .blockTitle {

@@ -233,19 +233,42 @@
         margin-top: 1.5rem;
     }
 
-    // .services__header
+}
+
+.app {
+
+    // .app__header
 
     &__header {
         text-align: center;
-        margin-top: 3.375rem;
     }
 
-    // .services__title
+    // .app__title
 
     &__title {
         font-size: 3rem;
         line-height: 1.25;
         color: $color_black_main;
-        font-weight: 800;
+        font-weight: 700;
+    }
+
+    // .app__body
+
+    &__body {
+        margin-top: 5.625rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    // .app__img
+
+    &__img {
+    }
+
+    // .app__card
+
+    &__card {
+        margin-top: 3.125rem;
+        margin-left: 0.75rem;
     }
 }

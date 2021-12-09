@@ -1,18 +1,71 @@
 // === Footer [ Стили для футера, используемые на всех страницах ] ===
 
 .footer {
-    background-color: $color_primary;
-    padding: 1.5rem 0;
-    
+    position: relative;
+    background-color: $color_black_main;
+    padding: 7.5rem 0 8.75rem 0;
+    margin-top: 10rem;
+
+    // .footer__inner
+
     &__inner {
         display: flex;
-        justify-content: space-between;
-    
-        p {
-            color: $color_white;
+        align-items: center;
+    }
+
+    // .footer__banner
+
+    &__banner {
+        background-color: $color_white;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+
+        display: flex;
+        align-items: center;
+        padding: 3.125rem 2rem 3.125rem 11.25rem;
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-55%);
+    }
+
+    // .footer__logo
+
+    &__logo {
+    }
+
+    // .footer__navigation
+
+    &__navigation {
+
+        display: flex;
+        margin-left: auto;
+
+        .footerMenu {
+            margin-right: 5rem;
         }
     }
-    
+
+    // .footer__social
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .footer__socialLink
+
+    &__socialLink {
+        picture {
+            display: flex;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
 }
+
 
 // === / Footer ===
