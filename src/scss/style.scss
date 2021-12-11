@@ -192,13 +192,17 @@
     // .services__body
 
     &__body {
+        position: relative;
+        max-width: 66.875rem;
+        margin: 0 auto;
     }
 
     // .services__cards
 
     &__cards {
-        display: flex;
-        justify-content: center;
+        .swiper-slide {
+            height: unset;
+        }
     }
 
     // .services__card
@@ -206,13 +210,13 @@
     &__card {
         border-radius: 1.5rem;
         background-color: $color_black_main;
-        flex-basis: 13rem;
         padding: 2rem 1.5rem;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
+        height: 100%;
         
         &:not(:last-child) {
             margin-right: 4.375rem;

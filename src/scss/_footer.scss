@@ -6,11 +6,22 @@
     padding: 7.5rem 0 8.75rem 0;
     margin-top: 10rem;
 
+    @media ($media_sm) {
+        padding: 0;
+    }
+
     // .footer__inner
 
     &__inner {
         display: flex;
         align-items: center;
+
+        @media ($media_sm) {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
     }
 
     // .footer__banner
@@ -28,6 +39,13 @@
         left: 0;
         top: 50%;
         transform: translateY(-55%);
+
+        @media ($media_sm) {
+            padding: 2.5rem 2rem 2.5rem 1.25rem;
+            position: initial;
+            transform: unset;
+            margin-top: 3.25rem;
+        }
     }
 
     // .footer__logo
@@ -42,8 +60,20 @@
         display: flex;
         margin-left: auto;
 
+        @media ($media_sm) {
+            padding: 2.875rem 3.125rem 5rem 2.5rem;
+            flex-direction: column; 
+            margin-left: 0;
+        }
+
         .footerMenu {
             margin-right: 5rem;
+
+            @media ($media_sm) {
+                &:not(:last-child) {
+                    margin: 0 0 2.5rem 0;
+                }
+            }
         }
     }
 
@@ -52,6 +82,12 @@
     &__social {
         display: flex;
         flex-direction: column;
+
+        @media ($media_sm) {
+            position: absolute;
+            right: 3.125rem;
+            bottom: 5rem;
+        }
     }
 
     // .footer__socialLink

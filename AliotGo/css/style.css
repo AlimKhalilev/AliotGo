@@ -1337,7 +1337,7 @@ button.swiper-pagination-bullet {
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: -3rem;
+  left: -1rem;
   right: auto;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
@@ -1350,7 +1350,7 @@ button.swiper-pagination-bullet {
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: -3rem;
+  right: -1rem;
   left: auto;
 }
 
@@ -1371,6 +1371,30 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-bullet-active {
   background-color: tomato;
+}
+
+.swiper-button {
+  background: -o-linear-gradient(358.09deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.15) 100.82%);
+  background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0.15) 100.82%);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+}
+
+.swiper-button::after {
+  height: 30px;
+  width: 30px;
+  background-image: url(../img/slide_arrow.svg);
+  background-repeat: no-repeat;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  background-position: center;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 :root {
@@ -5696,20 +5720,19 @@ body.hideScroll {
   margin-bottom: 5rem;
 }
 
-.services__cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.services__body {
+  position: relative;
+  max-width: 66.875rem;
+  margin: 0 auto;
+}
+
+.services__cards .swiper-slide {
+  height: unset;
 }
 
 .services__card {
   border-radius: 1.5rem;
   background-color: #2A454E;
-  -ms-flex-preferred-size: 13rem;
-      flex-basis: 13rem;
   padding: 2rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5724,6 +5747,7 @@ body.hideScroll {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
 }
 
 .services__card:not(:last-child) {
@@ -5914,6 +5938,50 @@ body.hideScroll {
 
   .menu__item:not(:last-child) {
     margin: 0 0 0.25rem 0;
+  }
+
+  .footer {
+    padding: 0;
+  }
+
+  .footer__inner {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+
+  .footer__banner {
+    padding: 2.5rem 2rem 2.5rem 1.25rem;
+    position: initial;
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
+    margin-top: 3.25rem;
+  }
+
+  .footer__navigation {
+    padding: 2.875rem 3.125rem 5rem 2.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+  }
+
+  .footer__navigation .footerMenu:not(:last-child) {
+    margin: 0 0 2.5rem 0;
+  }
+
+  .footer__social {
+    position: absolute;
+    right: 3.125rem;
+    bottom: 5rem;
   }
 
   .main__buttons {
