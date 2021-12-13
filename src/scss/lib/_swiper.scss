@@ -668,6 +668,11 @@ button.swiper-pagination-bullet {
     width: 56px;
     height: 56px;
 
+    @media ($media_xs) {
+        width: 40px;
+        height: 40px;
+    }
+
     &::after {
         height: 30px;
         width: 30px;
@@ -678,6 +683,10 @@ button.swiper-pagination-bullet {
         left: 50%;
         background-position: center;
         transform: translate(-50%, -50%);
+
+        @media ($media_xs) {
+            transform: translate(-50%, -50%) scale(0.8);
+        }
     }
 
     &.swiper-button-next {

@@ -183,6 +183,10 @@
     .cardSection {
         &:not(:last-child) {
             margin-bottom: 5rem;
+
+            @media ($media_sm) {
+                margin-bottom: 3.5rem;
+            }
         }
     }
 }
@@ -195,6 +199,14 @@
         position: relative;
         max-width: 66.875rem;
         margin: 0 auto;
+
+        @media ($media_sm) {
+            max-width: 92%;
+        }
+
+        @media ($media_xs) {
+            max-width: 90%;
+        }
     }
 
     // .services__cards
@@ -225,6 +237,14 @@
         picture {
             //display: flex;
         }
+
+        @media ($media_xs) {
+            padding: 1.5rem;
+
+            img {
+                max-width: 5rem;
+            }
+        }
     }
 
     // .services__cardTitle
@@ -235,6 +255,11 @@
         line-height: 1.2;
         color: $color_milk;
         margin-top: 1.5rem;
+
+        @media ($media_xs) {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
     }
 
 }
@@ -254,6 +279,13 @@
         line-height: 1.25;
         color: $color_black_main;
         font-weight: 700;
+        text-transform: uppercase;
+
+        @media ($media_xs) {
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 1.5;
+        }
     }
 
     // .app__body
@@ -262,6 +294,11 @@
         margin-top: 5.625rem;
         display: flex;
         justify-content: center;
+
+        @media ($media_xs) {
+            flex-direction: column;
+            margin-top: 2.375rem;
+        }
     }
 
     // .app__img

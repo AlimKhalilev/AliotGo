@@ -2,6 +2,19 @@
 
 .header {
     margin-top: 3rem;
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+
+    @media ($media_sm) {
+        padding: 1rem 0;
+        margin-top: 0;
+        background-color: $color_white;
+    }
+
+    @media ($media_xs) {
+        padding: 0;
+    }
 
     // .header__inner
 
@@ -62,6 +75,10 @@
 
     &__links {
         margin-right: 1.5rem;
+
+        @media ($media_sm) {
+            margin: 1.5rem 0;
+        }
     }
 
     // .header__menu
@@ -73,7 +90,7 @@
     // .header__download
 
     &__download {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         text-decoration: none;
 
@@ -93,6 +110,10 @@
 
             display: inline-block;
             margin-left: 1rem;
+
+            @media ($media_xs) {
+                font-size: 1.125rem;
+            }
         }
     }
 }
@@ -101,6 +122,14 @@
 
     display: flex;
     width: 14rem;
+
+    @media ($media_sm) {
+        width: 10.5rem;
+    }
+
+    @media ($media_xs) {
+        width: 7.5rem;
+    }
 
     picture {
         display: inline-flex;
@@ -158,6 +187,10 @@
         font-size: 1.25rem;
 
         border-radius: 94px;
+
+        @media ($media_xs) {
+            font-size: 1.125rem;
+        }
 
         &:hover {
 

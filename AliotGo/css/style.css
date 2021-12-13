@@ -4220,7 +4220,7 @@ body.hideScroll {
 }
 
 .section--underHeader {
-  margin-top: 4.75rem;
+  margin-top: 12rem;
 }
 
 .section--beforeFooter {
@@ -4530,6 +4530,7 @@ body.hideScroll {
   position: relative;
   width: 100%;
   padding: calc(33.3% / 2) 0;
+  overflow: hidden;
 }
 
 .cardSection--main {
@@ -5442,6 +5443,9 @@ body.hideScroll {
 
 .header {
   margin-top: 3rem;
+  position: absolute;
+  z-index: 11;
+  width: 100%;
 }
 
 .header__inner {
@@ -5478,9 +5482,9 @@ body.hideScroll {
 }
 
 .header__download {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -5580,6 +5584,12 @@ body.hideScroll {
   -webkit-transform: translateY(-55%);
       -ms-transform: translateY(-55%);
           transform: translateY(-55%);
+}
+
+.footer__logo picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer__navigation {
@@ -5771,6 +5781,7 @@ body.hideScroll {
   line-height: 1.25;
   color: #2A454E;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .app__body {
@@ -5851,11 +5862,20 @@ body.hideScroll {
 
 @media (max-width: 778px) {
   .section__inner {
-    width: 90%;
+    width: 100%;
   }
 
   :root {
     --section_indent: 3rem;
+  }
+
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  .section--underHeader {
+    margin-top: 7rem;
   }
 
   .blockTitle {
@@ -5872,6 +5892,55 @@ body.hideScroll {
     display: flex;
   }
 
+  .baseCard {
+    padding: 3rem 2rem;
+  }
+
+  .baseCard__title {
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .baseCard__text {
+    font-weight: 400;
+    margin: 2rem 0;
+  }
+
+  .cardSection {
+    font-weight: 500;
+    padding: calc(31.25rem / 2) 0;
+  }
+
+  .cardSection--main .baseCardLink__text {
+    font-weight: 500;
+  }
+
+  .cardSection--main {
+    padding: calc(42rem / 2) 0;
+  }
+
+  .cardSection__banner img {
+    border-radius: 0;
+  }
+
+  .cardSection__baseCard {
+    left: -1.5rem;
+  }
+
+  .cardSection__baseCard .baseCard {
+    padding-left: 3rem;
+  }
+
+  .cardSection__baseCard--right {
+    left: unset;
+    right: -1.5rem;
+  }
+
+  .cardSection__baseCard--right .baseCard {
+    padding-left: 2rem;
+    padding-right: 3rem;
+  }
+
   .c-field {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5884,6 +5953,12 @@ body.hideScroll {
 
   .c-field .c-field__title {
     margin: 0 0 0.5rem 0;
+  }
+
+  .header {
+    padding: 1rem 0;
+    margin-top: 0;
+    background-color: #FFFFFF;
   }
 
   .header__inner {
@@ -5929,6 +6004,14 @@ body.hideScroll {
     width: 90%;
   }
 
+  .header__links {
+    margin: 1.5rem 0;
+  }
+
+  .logo {
+    width: 10.5rem;
+  }
+
   .menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5942,6 +6025,7 @@ body.hideScroll {
 
   .footer {
     padding: 0;
+    margin-top: 5.125rem;
   }
 
   .footer__inner {
@@ -5966,7 +6050,7 @@ body.hideScroll {
   }
 
   .footer__navigation {
-    padding: 2.875rem 3.125rem 5rem 2.5rem;
+    padding: 2.875rem 3.125rem 3rem 2.5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -6002,11 +6086,106 @@ body.hideScroll {
   .animBlock__items {
     grid-template-columns: 1fr;
   }
+
+  .banners .cardSection:not(:last-child) {
+    margin-bottom: 3.5rem;
+  }
+
+  .services__body {
+    max-width: 92%;
+  }
 }
 
 @media (max-width: 576px) {
   .section__inner {
-    width: 90%;
+    width: 100%;
+  }
+
+  .swiper-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button::after {
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+        -ms-transform: translate(-50%, -50%) scale(0.8);
+            transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  .section--underHeader {
+    margin-top: 5rem;
+  }
+
+  .baseCardLink__text {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .baseCardLink__icon {
+    min-width: 2.5rem;
+    max-width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .baseCardLink__arrow {
+    height: 1.25rem;
+  }
+
+  .baseCard {
+    padding: 2rem 1rem;
+    max-width: 95vw;
+  }
+
+  .baseCard__title {
+    font-size: 1.5rem;
+  }
+
+  .baseCard__text {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin: 1.25rem 0;
+  }
+
+  .cardSection--main .baseCardLink__text {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .cardSection {
+    font-weight: 500;
+    padding: calc(30rem / 2) 0;
+  }
+
+  .appCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 1.5rem;
+    padding: 2rem 2.5rem 2rem 2.5rem;
+  }
+
+  .appCard__title {
+    font-size: 1.375rem;
+    line-height: 1.2;
+  }
+
+  .appCard__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 1.5rem;
+  }
+
+  .appCard__buttons .appCardButton:not(:last-child) {
+    margin: 0 0 1rem 0;
   }
 
   .modal {
@@ -6014,8 +6193,82 @@ body.hideScroll {
     padding: 1.5rem;
   }
 
+  .header {
+    padding: 0;
+  }
+
   .header__inner {
     width: 100%;
+  }
+
+  .header__download span {
+    font-size: 1.125rem;
+  }
+
+  .logo {
+    width: 7.5rem;
+  }
+
+  .menu__link {
+    font-size: 1.125rem;
+  }
+
+  .footer__banner {
+    padding: 1.8rem 1.5rem 1.8rem 0.75rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .footer__banner img {
+    max-width: 9rem;
+  }
+
+  .footer__navigation {
+    padding: 2.875rem 1.75rem 3rem 1.75rem;
+  }
+
+  .footer__social {
+    position: initial;
+    padding: 0 3.125rem 2rem 2.5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .footer__socialLink:not(:last-child) {
+    margin: 0 1rem 0 0;
+  }
+
+  .services__body {
+    max-width: 90%;
+  }
+
+  .services__card {
+    padding: 1.5rem;
+  }
+
+  .services__card img {
+    max-width: 5rem;
+  }
+
+  .services__cardTitle {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .app__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.5;
+  }
+
+  .app__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 2.375rem;
   }
 }
 
