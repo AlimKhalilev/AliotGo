@@ -4669,6 +4669,27 @@ body.hideScroll {
   font-size: 1.25rem;
 }
 
+.footerMenu__title--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.footerMenu__title--link .baseCardLink__icon {
+  width: 2rem;
+  min-height: 2rem;
+  max-height: 2rem;
+  margin-left: 0.75rem;
+}
+
+.footerMenu__title--link .baseCardLink__arrow {
+  height: 1rem;
+}
+
 .footerMenu__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5532,7 +5553,7 @@ body.hideScroll {
   margin-right: 0.25rem;
 }
 
-.menu__item--active .menu__link {
+.menu__item:hover .menu__link {
   background: -o-linear-gradient(358.09deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);
   background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
@@ -5568,7 +5589,10 @@ body.hideScroll {
 }
 
 .footer__banner {
-  background-color: #FFFFFF;
+  background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), -o-linear-gradient(358.09deg, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0.77) 100.82%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(91.91deg, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0.77) 100.82%);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
   display: -webkit-box;
@@ -5799,6 +5823,54 @@ body.hideScroll {
   margin-left: 0.75rem;
 }
 
+.documentation {
+  margin-bottom: auto;
+}
+
+.documentation__card {
+  border-radius: 1.5rem;
+  background: -o-linear-gradient(323.4deg, rgba(255, 255, 255, 0.048) 28.69%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.048) 28.69%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(45px);
+          backdrop-filter: blur(45px);
+  padding: 5rem 5.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.documentation__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.documentation__link {
+  background: -o-linear-gradient(323.4deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+  -webkit-backdrop-filter: blur(45px);
+          backdrop-filter: blur(45px);
+  border-radius: 6rem;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  padding: 1.25rem 2.5rem;
+  text-decoration: none;
+  color: #44585F;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.documentation__link:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
 @media (min-width: 779px) {
   .btn {
     cursor: pointer;
@@ -5841,6 +5913,10 @@ body.hideScroll {
   html,
   body {
     font-size: 14px;
+  }
+
+  .footer__banner {
+    padding: 3rem 2rem 3rem 7rem;
   }
 
   .animBlock__items {
@@ -5939,6 +6015,44 @@ body.hideScroll {
   .cardSection__baseCard--right .baseCard {
     padding-left: 2rem;
     padding-right: 3rem;
+  }
+
+  .appCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 1.5rem;
+    padding: 2rem 2.5rem 2rem 2.5rem;
+  }
+
+  .appCard__title {
+    font-size: 1.375rem;
+    line-height: 1.2;
+  }
+
+  .appCard__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 1.5rem;
+  }
+
+  .appCard__buttons .appCardButton:not(:last-child) {
+    margin: 0 0 1rem 0;
+  }
+
+  .footerMenu__title--link .baseCardLink__icon {
+    min-width: 2rem;
+    max-width: 2rem;
+    min-height: 2rem;
   }
 
   .c-field {
@@ -6094,6 +6208,30 @@ body.hideScroll {
   .services__body {
     max-width: 92%;
   }
+
+  .app__body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .app__img {
+    width: 50%;
+  }
+
+  .app__card {
+    margin-top: -1rem;
+  }
+
+  .documentation__card {
+    padding: 3rem;
+    margin: 2rem 2rem 0 2rem;
+  }
+
+  .documentation__link {
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -6154,38 +6292,6 @@ body.hideScroll {
   .cardSection {
     font-weight: 500;
     padding: calc(30rem / 2) 0;
-  }
-
-  .appCard {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-top: 1.5rem;
-    padding: 2rem 2.5rem 2rem 2.5rem;
-  }
-
-  .appCard__title {
-    font-size: 1.375rem;
-    line-height: 1.2;
-  }
-
-  .appCard__buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-top: 1.5rem;
-  }
-
-  .appCard__buttons .appCardButton:not(:last-child) {
-    margin: 0 0 1rem 0;
   }
 
   .modal {
@@ -6269,6 +6375,25 @@ body.hideScroll {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 2.375rem;
+  }
+
+  .app__img {
+    width: 95%;
+  }
+
+  .app__card {
+    margin-top: 1rem;
+  }
+
+  .documentation__card {
+    padding: 1rem;
+    margin: 2rem 1rem 0 1rem;
+    border-radius: 1rem;
+  }
+
+  .documentation__link {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
   }
 }
 

@@ -164,7 +164,7 @@
 
         // .menu__item--active
 
-        &--active {
+        &:hover {
 
             .menu__link {
                 background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);

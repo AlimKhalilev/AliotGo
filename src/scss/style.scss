@@ -295,6 +295,10 @@
         display: flex;
         justify-content: center;
 
+        @media ($media_sm) {
+            align-items: center;
+        }
+
         @media ($media_xs) {
             flex-direction: column;
             margin-top: 2.375rem;
@@ -304,6 +308,13 @@
     // .app__img
 
     &__img {
+        @media ($media_sm) {
+            width: 50%;
+        }
+
+        @media ($media_xs) {
+            width: 95%;
+        }
     }
 
     // .app__card
@@ -311,5 +322,78 @@
     &__card {
         margin-top: 3.125rem;
         margin-left: 0.75rem;
+
+        @media ($media_sm) {
+            margin-top: -1rem;
+        }
+
+        @media ($media_xs) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.documentation {
+    margin-bottom: auto;
+
+    // .documentation__card
+
+    &__card {
+        border-radius: 1.5rem;
+        background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.048) 28.69%, rgba(255, 255, 255, 0) 100%);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(45px);
+        padding: 5rem 5.625rem;
+
+        display: flex;
+
+        @media ($media_sm) {
+            padding: 3rem;
+            margin: 2rem 2rem 0 2rem;
+        }
+
+        @media ($media_xs) {
+            padding: 1rem;
+            margin: 2rem 1rem 0 1rem;
+            border-radius: 1rem;
+        }
+    }
+
+    // .documentation__container
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .documentation__link
+
+    &__link {
+        background: linear-gradient(126.6deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%);
+        backdrop-filter: blur(45px);
+        border-radius: 6rem;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+
+        display: inline-block;
+        padding: 1.25rem 2.5rem;
+        text-decoration: none;
+
+        color: $color_documentation_link;
+        font-weight: 600;
+        font-size: 1.5rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        @media ($media_sm) {
+            font-size: 1.25rem;
+            padding: 1rem 2rem;
+        }
+
+        @media ($media_xs) {
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+        }
     }
 }

@@ -8,9 +8,14 @@
         <nav class="footer__navigation">
             <div class="footerMenu">
                 <div class="footerMenu__header">
-                    <h4 class="footerMenu__title">Документация</h4>
+                    <a href="./documentation.html" class="footerMenu__title footerMenu__title--link">
+                        <span>Документация</span>
+                        <div class="baseCardLink__icon">
+                            <svg class="baseCardLink__arrow"><use xlink:href="./img/main.svg#arrowCard"></use></svg>   
+                        </div>
+                    </a>
                 </div>
-                <ul class="footerMenu__items">
+                <!-- <ul class="footerMenu__items">
                     <li class="footerMenu__item">
                         <a class="footerMenu__link" href="#">Пользовательское соглашение</a>
                     </li>
@@ -26,7 +31,7 @@
                     <li class="footerMenu__item">
                         <a class="footerMenu__link" href="#">Обработка персональных данных</a>
                     </li>
-                </ul> 
+                </ul>  -->
             </div>
 
             <div class="footerMenu">
@@ -34,18 +39,10 @@
                     <h4 class="footerMenu__title">Навигация</h4>
                 </div>
                 <ul class="footerMenu__items">
-                    <li class="footerMenu__item">
-                        <a class="footerMenu__link" href="#">Такси</a>
-                    </li>
-                    <li class="footerMenu__item">
-                        <a class="footerMenu__link" href="#">Трансфер</a>
-                    </li>
-                    <li class="footerMenu__item">
-                        <a class="footerMenu__link" href="#">Доставка</a>
-                    </li>
-                    <li class="footerMenu__item">
-                        <a class="footerMenu__link" href="#">Каршеринг</a>
-                    </li>
+                    <li class="footerMenu__item"><a class="footerMenu__link" href="#" data-scroll=".cardSection--taxi">Такси</a></li>
+                    <li class="footerMenu__item"><a class="footerMenu__link" href="#" data-scroll=".cardSection--transfer">Трансфер</a></li>
+                    <li class="footerMenu__item"><a class="footerMenu__link" href="#" data-scroll=".cardSection--delivery">Доставка</a></li>
+                    <li class="footerMenu__item"><a class="footerMenu__link" href="#" data-scroll=".cardSection--carshare">Каршеринг</a></li>
                 </ul> 
             </div>
 
