@@ -8,6 +8,7 @@
 
     @media ($media_sm) {
         --section_indent: 3rem;
+        --header-min-height: 6rem;
     }
 }
 
@@ -107,7 +108,7 @@ html, body {
         }
 
         @media ($media_xs) {
-            margin-top: 5rem;
+            margin-top: 6rem;
         }
     }
 

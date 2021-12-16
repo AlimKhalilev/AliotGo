@@ -4641,6 +4641,8 @@ body.hideScroll {
           backdrop-filter: blur(30px);
   border-radius: 1.5rem;
   padding: 3.125rem 2.5rem 3.125rem 3.75rem;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .appCard__title {
@@ -5818,9 +5820,13 @@ body.hideScroll {
           justify-content: center;
 }
 
+.app__img {
+  width: 50%;
+}
+
 .app__card {
   margin-top: 3.125rem;
-  margin-left: 0.75rem;
+  margin-left: 2rem;
 }
 
 .documentation {
@@ -5926,7 +5932,7 @@ body.hideScroll {
 
 @media (max-width: 1280px) {
   .section__inner {
-    max-width: 950px;
+    max-width: 1150px;
   }
 }
 
@@ -5943,6 +5949,7 @@ body.hideScroll {
 
   :root {
     --section_indent: 3rem;
+    --header-min-height: 6rem;
   }
 
   html,
@@ -6001,6 +6008,7 @@ body.hideScroll {
 
   .cardSection__baseCard {
     left: -1.5rem;
+    top: 36%;
   }
 
   .cardSection__baseCard .baseCard {
@@ -6215,12 +6223,9 @@ body.hideScroll {
             align-items: center;
   }
 
-  .app__img {
-    width: 50%;
-  }
-
   .app__card {
     margin-top: -1rem;
+    margin-left: 0;
   }
 
   .documentation__card {
@@ -6251,7 +6256,7 @@ body.hideScroll {
   }
 
   .section--underHeader {
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
 
   .baseCardLink__text {
@@ -6279,9 +6284,9 @@ body.hideScroll {
   }
 
   .baseCard__text {
-    font-size: 1rem;
-    line-height: 1.3;
-    margin: 1.25rem 0;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin: 1rem 0;
   }
 
   .cardSection--main .baseCardLink__text {
@@ -6312,7 +6317,7 @@ body.hideScroll {
   }
 
   .logo {
-    width: 7.5rem;
+    width: 8.5rem;
   }
 
   .menu__link {
@@ -6320,13 +6325,13 @@ body.hideScroll {
   }
 
   .footer__banner {
-    padding: 1.8rem 1.5rem 1.8rem 0.75rem;
+    padding: 1.8rem 2.5rem 1.8rem 0.75rem;
     border-top-right-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
   }
 
   .footer__banner img {
-    max-width: 9rem;
+    max-width: 11rem;
   }
 
   .footer__navigation {
@@ -6344,6 +6349,10 @@ body.hideScroll {
 
   .footer__socialLink:not(:last-child) {
     margin: 0 1rem 0 0;
+  }
+
+  .banners .cardSection:not(:last-child) {
+    margin-bottom: 2.5rem;
   }
 
   .services__body {
@@ -6378,7 +6387,7 @@ body.hideScroll {
   }
 
   .app__img {
-    width: 95%;
+    width: 75%;
   }
 
   .app__card {
@@ -6386,7 +6395,7 @@ body.hideScroll {
   }
 
   .documentation__card {
-    padding: 1rem;
+    padding: 2rem 1rem;
     margin: 2rem 1rem 0 1rem;
     border-radius: 1rem;
   }

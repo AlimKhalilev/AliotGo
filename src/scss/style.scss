@@ -187,6 +187,10 @@
             @media ($media_sm) {
                 margin-bottom: 3.5rem;
             }
+
+            @media ($media_xs) {
+                margin-bottom: 2.5rem;
+            }
         }
     }
 }
@@ -308,12 +312,10 @@
     // .app__img
 
     &__img {
-        @media ($media_sm) {
-            width: 50%;
-        }
+        width: 50%;
 
         @media ($media_xs) {
-            width: 95%;
+            width: 75%;
         }
     }
 
@@ -321,10 +323,11 @@
 
     &__card {
         margin-top: 3.125rem;
-        margin-left: 0.75rem;
+        margin-left: 2rem;
 
         @media ($media_sm) {
             margin-top: -1rem;
+            margin-left: 0;
         }
 
         @media ($media_xs) {
@@ -353,7 +356,7 @@
         }
 
         @media ($media_xs) {
-            padding: 1rem;
+            padding: 2rem 1rem;
             margin: 2rem 1rem 0 1rem;
             border-radius: 1rem;
         }
