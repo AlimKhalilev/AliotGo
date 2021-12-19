@@ -5877,7 +5877,7 @@ body.hideScroll {
   margin-bottom: 1.5rem;
 }
 
-@media (min-width: 779px) {
+@media (min-width: 1151px) {
   .btn {
     cursor: pointer;
   }
@@ -5936,13 +5936,13 @@ body.hideScroll {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .section__inner {
-    width: 90%;
+    width: 100%;
   }
 }
 
-@media (max-width: 778px) {
+@media (max-width: 1150px) {
   .section__inner {
     width: 100%;
   }
@@ -6008,7 +6008,7 @@ body.hideScroll {
 
   .cardSection__baseCard {
     left: -1.5rem;
-    top: 36%;
+    top: 50%;
   }
 
   .cardSection__baseCard .baseCard {
@@ -6223,6 +6223,11 @@ body.hideScroll {
             align-items: center;
   }
 
+  .app__img {
+    width: 40%;
+    margin-right: 2rem;
+  }
+
   .app__card {
     margin-top: -1rem;
     margin-left: 0;
@@ -6296,7 +6301,11 @@ body.hideScroll {
 
   .cardSection {
     font-weight: 500;
-    padding: calc(30rem / 2) 0;
+    padding: calc(80vh / 2) 0;
+  }
+
+  .cardSection__baseCard {
+    top: 36%;
   }
 
   .modal {
@@ -6388,6 +6397,7 @@ body.hideScroll {
 
   .app__img {
     width: 75%;
+    margin: 0;
   }
 
   .app__card {

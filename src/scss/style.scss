@@ -314,8 +314,14 @@
     &__img {
         width: 50%;
 
+        @media ($media_sm) {
+            width: 40%;
+            margin-right: 2rem;
+        }
+
         @media ($media_xs) {
             width: 75%;
+            margin: 0;
         }
     }
 
