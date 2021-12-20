@@ -4141,8 +4141,7 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
-  background-image: url(../img/body_bg.png);
-  background-size: cover;
+  background-color: #FFFFFF;
   font-size: 16px;
   min-height: 100vh;
   display: -webkit-box;
@@ -6431,8 +6430,6 @@ body.hideScroll {
     opacity: 0;
   }
 }
-
-.webp-support html, .webp-support body{ background-image: url(../img/body_bg.webp); }
 
 .webp-support .baseCard{ background: url(../img/card-shape-new.webp), -o-linear-gradient(323.4deg, rgba(255, 255, 255, 0.12) 28.69%, rgba(255, 255, 255, 0) 100%); }
 
