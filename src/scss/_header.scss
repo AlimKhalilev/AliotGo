@@ -1,0 +1,201 @@
+// === header === [ Стили для навбара, используемые на всех страницах ] ===
+
+.header {
+    margin-top: 3rem;
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+
+    @media ($media_sm) {
+        padding: 1rem 0;
+        margin-top: 0;
+        background-color: $color_white;
+    }
+
+    @media ($media_xs) {
+        padding: 0;
+    }
+
+    // .header__inner
+
+    &__inner {
+        min-height: var(--header-min-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media ($media_sm) {
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media ($media_xs) {
+            width: 100%;
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        margin-right: 5rem;
+
+        @media ($media_sm) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: inherit;
+
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    // .header__controls
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media ($media_sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0 auto calc(var(--header-min-height) / 3);
+
+            &[data-burger='menu'] {
+                display: none; // если бургер меню активно
+                width: 90%;
+            }
+        }
+    }
+
+    // .header__links
+
+    &__links {
+        margin-right: 1.5rem;
+
+        @media ($media_sm) {
+            margin: 1.5rem 0;
+        }
+    }
+
+    // .header__menu
+
+    &__menu {
+
+    }
+
+    // .header__download
+
+    &__download {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+
+        padding: 0.625rem 1.25rem;
+        background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 94px;
+
+        svg {
+            fill: $color_black_main;
+        }
+
+        span {
+            font-weight: 600;
+            font-size: 1.375rem;
+            color: $color_black_main;
+
+            display: inline-block;
+            margin-left: 1rem;
+
+            @media ($media_xs) {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+
+.logo {
+
+    display: flex;
+    width: 14rem;
+
+    @media ($media_sm) {
+        width: 10.5rem;
+    }
+
+    @media ($media_xs) {
+        width: 8.5rem;
+    }
+
+    picture {
+        display: inline-flex;
+    }
+
+    // .logo__icon
+
+    &__icon {
+        
+    }
+}
+
+.menu {
+    display: flex;
+    
+    @media ($media_sm) {
+        flex-direction: column;
+    }
+
+    // .menu__item
+
+    &__item {
+
+
+        &:not(:last-child) {
+            margin-right: 0.25rem;
+
+            @media ($media_sm) {
+                margin: 0 0 0.25rem 0;
+            }
+        }
+
+        // .menu__item--active
+
+        &:hover {
+
+            .menu__link {
+                background: linear-gradient(91.91deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 100.82%);
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+                font-weight: 600;
+            }
+        }
+    }
+
+    // .menu__link
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        color: $color_black_main;
+        text-decoration: none;
+
+        font-weight: 500;
+        font-size: 1.25rem;
+
+        border-radius: 94px;
+
+        @media ($media_xs) {
+            font-size: 1.125rem;
+        }
+
+        &:hover {
+
+        }
+    }
+}
+
+// === / header ===
